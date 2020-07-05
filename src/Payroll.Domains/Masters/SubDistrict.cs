@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using Payroll.Domains.Bases;
 
@@ -13,5 +14,8 @@ namespace Payroll.Domains.Masters
         public virtual District District { get; set; }
         public virtual int ProvinceId { get; set; }
         public virtual Province Province { get; set; }
+
+        public HashSet<Address> Addresses { get; set; }
+        public HashSet<Company> Companies { get; set; }
     }
 }
