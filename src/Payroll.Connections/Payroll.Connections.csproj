@@ -24,7 +24,4 @@
     <ProjectReference Include="..\Payroll.IBaseAdhocs\Payroll.IBaseAdhocs.csproj" />
     <ProjectReference Include="..\Payroll.IConnections\Payroll.IConnections.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mappings\" />
-  </ItemGroup>
 </Project>
