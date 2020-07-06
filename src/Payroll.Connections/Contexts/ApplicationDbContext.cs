@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Payroll.Connections.Mappings;
 using Payroll.Domains.Audits;
+using Payroll.Domains.Masters;
 using Payroll.IConnections.Commands;
 using Payroll.IConnections.Queries;
 
@@ -48,7 +49,14 @@ namespace Payroll.Connections.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<AuditTrail>(AuditTailTableMapper.Config);
+            modelBuilder.Entity<AuditTrail>(AuditTailMapper.Config);
+            modelBuilder.Entity<Sex>(SexMapper.Config);
+            modelBuilder.Entity<Country>(CountryMapper.Config);
+            modelBuilder.Entity<Province>(ProvinceMapper.Config);
+            modelBuilder.Entity<District>(DistrictMapper.Config);
+            modelBuilder.Entity<SubDistrict>(SubDistrictMapper.Config);
+
+
             base.OnModelCreating(modelBuilder);
         }
     }

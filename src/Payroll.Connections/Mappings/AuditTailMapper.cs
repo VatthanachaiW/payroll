@@ -4,7 +4,7 @@ using Payroll.Domains.Audits;
 
 namespace Payroll.Connections.Mappings
 {
-    public class AuditTailTableMapper
+    public class AuditTailMapper
     {
         public static void Config(EntityTypeBuilder<AuditTrail> builder)
         {
