@@ -4,16 +4,16 @@ using Payroll.Domains.Masters;
 
 namespace Payroll.Connections.Mappings
 {
-    public class CountryMapper
+    public class AddressTypeMapper
     {
-        public static void Config(EntityTypeBuilder<Country> builder)
+        public static void Config(EntityTypeBuilder<AddressType> builder)
         {
-            builder.ToTable("tb_countries");
+            builder.ToTable("tb_address_types");
 
             builder.HasKey(k => k.Id);
-            builder.Property(p => p.Id).HasColumnName("country_id").ValueGeneratedOnAdd();
+            builder.Property(p => p.Id).HasColumnName("address_type_id").ValueGeneratedOnAdd();
 
-            builder.Property(p => p.CountryName).HasColumnName("country_name").IsRequired();
+            builder.Property(p => p.AddressTypeName).HasColumnName("address_type_name").IsRequired();
 
             builder.Property(p => p.IsActive).HasColumnName("is_active").HasDefaultValue(true).ValueGeneratedOnAdd();
             builder.Property(p => p.CreatedBy).HasColumnName("created_by").IsRequired();

@@ -2,8 +2,7 @@
 
 namespace Payroll.IRepositories
 {
-    public interface ICountryRepository:IGenericRepository<Country>
+    public interface ICountryRepository : IGenericRepository<Country>
     {
-        
     }
 }

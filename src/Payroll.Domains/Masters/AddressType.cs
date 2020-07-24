@@ -6,7 +6,7 @@ using Payroll.Domains.Bases;
 namespace Payroll.Domains.Masters
 {
     [Serializable, JsonObject]
-    public class AddressType:BaseClassWithIsActive<int>
+    public class AddressType : BaseClassWithAuditAndIsActive<int>
     {
         public virtual string AddressTypeName { get; set; }
 

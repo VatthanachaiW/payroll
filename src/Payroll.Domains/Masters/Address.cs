@@ -14,6 +14,7 @@ namespace Payroll.Domains.Masters
         public virtual int SubDistrictId { get; set; }
         public virtual SubDistrict SubDistrict { get; set; }
         public virtual string ZipCode { get; set; }
+        public virtual int AddressTypeId { get; set; }
         public virtual AddressType AddressType { get; set; }
     }
 }

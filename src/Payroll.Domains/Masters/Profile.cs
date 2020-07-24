@@ -30,6 +30,7 @@ namespace Payroll.Domains.Masters
         public virtual Position Position { get; set; }
         public virtual string ProfileImagePath { get; set; }
 
+        public virtual HashSet<Address> Addresses { get; set; }
         public virtual HashSet<CheckInDetail> CheckInDetails { get; set; }
     }
 }
